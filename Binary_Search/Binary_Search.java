@@ -1,14 +1,7 @@
 import java.util.Scanner;
-public class Binary_Search{
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int[] arr=new int[10];
-        System.out.println("element found on position");
-        for(int i=0;i<arr.length;i++)
-        {
-            arr[i]=sc.nextInt();
-        }
-        int element=sc.nextInt();
+class Search{
+    public void return_Search(int[] arr , int element)
+    {
         int start=0;
         int end=arr.length-1;
         int mid;
@@ -29,22 +22,24 @@ public class Binary_Search{
         if(start>end){
             System.out.println("not get");
         }
-        return;
     }
-    //     while(start<=end){
-    //         mid=(start+ (end-start))/2;
-    //         if(arr[mid]==element)
-    //         {
-    //          System.out.println("element found on position");   
-    //          break;
-    //         }
-    //     }
-    //     System.out.println("element found on position");
-    // }
-    // // static void binary(int ceiling_element , int[] arr)
-    // // {
-      
-    //     }
-    // }
+}
+public class Binary_Search{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int[] arr=new int[10];
+        System.out.println("Enter the elements 0-9 : ");
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.err.println("enter the element to be search");
+        int element=sc.nextInt();
+        Search ss= new Search();
+       ss.return_Search(arr, element);
+        
+        
+    }
+
 
 }
