@@ -28,17 +28,16 @@ class Sort{
 public class Selection_Sort{
   public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
-    int[] arr={938, 34 , 3232 ,443 ,22, 5};
-    // System.out.println("Enter the elements 0-9 : ");
-    // for(int i=0;i<arr.length;i++)
-    // {
-    //     arr[i]=sc.nextInt();
-    // }
+    int[] arr=new int [10];
+    System.out.println("Enter the elements 0-9 : ");
+    for(int i=0;i<arr.length;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
     System.out.println("the sorted non decreasing array is : ");
     Sort ss=new Sort();
     ss.Return_Array(arr);
-    ss.printing(arr);
-      
+    ss.printing(arr);    
   }  
 }
 
