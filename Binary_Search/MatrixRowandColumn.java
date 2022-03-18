@@ -1,12 +1,12 @@
 public class MatrixRowandColumn {
     public static void main(String[] args) {
         int[][] matrix={
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}
+            { 1, 2,  3,  4  },
+                { 5, 6,  7,  8  },
+                { 9, 10, 11, 12 }
         };
         MatrixSearch ss=new MatrixSearch();
-        int[] arr=ss.Searchh(matrix,9);
+        int[] arr=ss.Searchh(matrix,12);
         for(int k=0;k<arr.length;k++)
         {
             System.out.println(arr[k]);
@@ -18,7 +18,7 @@ class MatrixSearch {
     public int[] Searchh(int[][] matrix , int element)
     {   
         int start=0;
-        int end=matrix.length-1;
+        int end=matrix[0].length-1;
         while(start<matrix.length && end >=0)
         {
         if(matrix[start][end]==element)

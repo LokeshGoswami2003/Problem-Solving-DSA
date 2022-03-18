@@ -81,7 +81,7 @@ public class Sorted_Matrix {
                 { 9, 10, 11, 12 }
         };
         MatrixSearch ss = new MatrixSearch();
-        int[] arr=ss.Searchh(matrix, 9);
+        int[] arr=ss.Searchh(matrix, 4);
         for(int k=0;k<arr.length;k++)
         {
             System.out.println(arr[k]);
