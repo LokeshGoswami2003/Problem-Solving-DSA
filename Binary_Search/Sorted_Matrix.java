@@ -42,11 +42,11 @@ class MatrixSearch {
             return binary_search(matrix, rstart, 0, midc - 1, element);
         }
         // for part 2
-        if (element <= matrix[rstart + 1][midc - 1]) {
+        if (element <= matrix[rstart + 1][midc - 1] && element>=matrix[rstart+1][0]) {
             return binary_search(matrix, rstart + 1, 0, midc - 1, element);
         }
         // for part 3
-        if (element >= matrix[rstart][midc + 1]) {
+        if (element >= matrix[rstart][midc + 1] && element<=matrix[rstart][cols-1]) {
             return binary_search(matrix, rstart, midc + 1, cols-1, element);
         }
         // for part 4
@@ -81,7 +81,7 @@ public class Sorted_Matrix {
                 { 9, 10, 11, 12 }
         };
         MatrixSearch ss = new MatrixSearch();
-        int[] arr=ss.Searchh(matrix, 4);
+        int[] arr=ss.Searchh(matrix, 10);
         for(int k=0;k<arr.length;k++)
         {
             System.out.println(arr[k]);
