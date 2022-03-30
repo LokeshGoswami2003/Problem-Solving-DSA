@@ -1,6 +1,6 @@
 public class Sorted_Or_Not {
     public static void main(String[] args) {
-        int[] arr = { 1,2,3,2 };
+        int[] arr = { 1,2,3,0};
         boolean ans = is_sorted(arr);
         System.out.println(ans);
     }
@@ -11,9 +11,6 @@ public class Sorted_Or_Not {
         if(index==arr.length-1){
             return true;
         }
-        if(arr[index]<arr[index+1]){
-            return clone(arr, ++index);
-        }
-        return false;
+        return arr[index]<=arr[index+1] && clone(arr, ++index);
     }
 }
